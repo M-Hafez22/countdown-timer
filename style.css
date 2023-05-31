@@ -21,6 +21,13 @@ body {
   min-height: 90vh;
   color: #55ceb0;
 }
+
+label {
+  font-size: 1.2em;
+  font-weight: 600;
+  padding: 0.5em;
+}
+
 .countdown-dashboard {
   display: flex;
   flex-wrap: wrap;
@@ -44,4 +51,19 @@ body {
 
 #deadline {
   margin-top: 2em;
+}
+
+.options {
+  cursor: pointer;
+  font-size: 1em;
+  padding: 0.4em;
+  border-radius: 15px;
+  background-color: #fafafa;
+  transition: all 300ms;
+}
+
+.option {
+  padding: 0 15px;
+  transition: all 300ms;
+  display: inline;
 }
