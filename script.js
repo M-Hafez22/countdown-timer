@@ -11,3 +11,7 @@ const minsEl = document.getElementById("mins");
 const secondsEl = document.getElementById("seconds");
 // Time is Out message
 const messEl = document.getElementById("mess");
+// Input Fields
+const getDateEl = document.getElementById("date");
+const getMinuteEl = document.getElementById("minute");
+const getHourEl = document.getElementById("hour");
