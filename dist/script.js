@@ -88,6 +88,30 @@ function countdown() {
     minsEl.textContent = addLeadingZero(mins);
     secondsEl.textContent = addLeadingZero(seconds);
     // Dispaly only needed cells
+    decades <= 0
+        ? (decadesEl.parentElement.style.display = "none")
+        : (decadesEl.parentElement.style.display = "block");
+    years <= 0
+        ? (yearsEl.parentElement.style.display = "none")
+        : (yearsEl.parentElement.style.display = "block");
+    months <= 0
+        ? (monthsEl.parentElement.style.display = "none")
+        : (monthsEl.parentElement.style.display = "block");
+    weeks <= 0
+        ? (weeksEl.parentElement.style.display = "none")
+        : (weeksEl.parentElement.style.display = "block");
+    days <= 0
+        ? (daysEl.parentElement.style.display = "none")
+        : (daysEl.parentElement.style.display = "block");
+    hours <= 0
+        ? (hoursEl.parentElement.style.display = "none")
+        : (hoursEl.parentElement.style.display = "block");
+    mins <= 0
+        ? (minsEl.parentElement.style.display = "none")
+        : (minsEl.parentElement.style.display = "block");
+    seconds <= 0
+        ? (secondsEl.parentElement.style.display = "none")
+        : (secondsEl.parentElement.style.display = "block");
 }
 // initial call
 countdown();
