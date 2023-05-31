@@ -1,5 +1,9 @@
 body {
   /* margin: 2em; */
+  background-image: url("./clock.jpg");
+  background-size: cover;
+  background-position: center center;
+
   padding: 2em;
   display: flex;
   flex-direction: column;
