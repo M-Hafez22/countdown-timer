@@ -29,6 +29,7 @@ for (let i = 0; i < 60; i++) {
   let opt = document.createElement("option")
   opt.value = addLeadingZero(i)
   opt.textContent = addLeadingZero(i)
+  opt.classList.add("option")
   getMinuteEl?.appendChild(opt)
 }
 
@@ -37,6 +38,7 @@ for (let i = 0; i < 24; i++) {
   let opt = document.createElement("option")
   opt.value = addLeadingZero(i)
   opt.textContent = addLeadingZero(i)
+  opt.classList.add("option")
   getHourEl?.appendChild(opt)
 }
 
