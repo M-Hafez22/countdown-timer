@@ -22,3 +22,10 @@ for (let i = 0; i < 60; i++) {
     opt.textContent = i < 10 ? `0${i}` : i.toString();
     getMinuteEl === null || getMinuteEl === void 0 ? void 0 : getMinuteEl.appendChild(opt);
 }
+// Generates Hours Input List
+for (let i = 0; i < 24; i++) {
+    let opt = document.createElement("option");
+    opt.value = i < 10 ? `0${i}` : i.toString();
+    opt.textContent = i < 10 ? `0${i}` : i.toString();
+    getHourEl === null || getHourEl === void 0 ? void 0 : getHourEl.appendChild(opt);
+}
