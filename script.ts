@@ -67,4 +67,8 @@ document.getElementById("deadline")!.addEventListener("change", function () {
 
 function countdown() {
   console.log("Hi, I'm the countdown function")
+  const currentDate: Date = new Date()
+  // Calculate the countdown time clock
+  // Print the countdown time clock
+  // Dispaly only needed cells
 }
