@@ -15,6 +15,15 @@ const getDateEl = document.getElementById("date")!
 const getMinuteEl = document.getElementById("minute")
 const getHourEl = document.getElementById("hour")
 
+/**
+ * Add leading Zero to numbers
+ * @example 2 > 02
+ * @param {number} number
+ * @returns {string} the number with leading zero
+ */
+const addLeadingZero = (number: number): string =>
+  number < 10 ? `0${number}` : number.toString()
+
 // Generates Minutes Input List
 for (let i = 0; i < 60; i++) {
   let opt = document.createElement("option")
