@@ -51,3 +51,20 @@ let today = year + "-" + month + "-" + day
 ;(getDateEl as HTMLInputElement).value = today
 ;(getMinuteEl as HTMLInputElement).value = min.toString()
 ;(getHourEl as HTMLInputElement).value = hour.toString()
+
+let dateEntered: Date
+
+// Update the Countdown with user input
+document.getElementById("deadline")!.addEventListener("change", function () {
+  let newDate = (getDateEl as HTMLInputElement).value
+  let newHour = (getHourEl as HTMLInputElement).value
+  let newMin = (getMinuteEl as HTMLInputElement).value
+  let newTime = new Date(`${newDate}T${newHour}:${newMin}`)
+  // console.log(newTime)
+  dateEntered = new Date(`${newDate}T${newHour}:${newMin}`)
+  countdown()
+})
+
+function countdown() {
+  console.log("Hi, I'm the countdown function")
+}
