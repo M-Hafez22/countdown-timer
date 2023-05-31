@@ -78,5 +78,13 @@ function countdown() {
     const mins = Math.floor(totalSeconds / 60) % 60;
     const seconds = Math.floor(totalSeconds) % 60;
     // Print the countdown time clock
+    decadesEl.textContent = decades.toString();
+    yearsEl.textContent = years.toString();
+    monthsEl.textContent = months.toString();
+    weeksEl.textContent = weeks.toString();
+    daysEl.textContent = addLeadingZero(days).toString();
+    hoursEl.textContent = addLeadingZero(hours);
+    minsEl.textContent = addLeadingZero(mins);
+    secondsEl.textContent = addLeadingZero(seconds);
     // Dispaly only needed cells
 }
