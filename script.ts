@@ -52,7 +52,12 @@ let today = year + "-" + month + "-" + day
 ;(getMinuteEl as HTMLInputElement).value = min.toString()
 ;(getHourEl as HTMLInputElement).value = hour.toString()
 
+// init enterdate from the browser storage
 let dateEntered: Date
+if (localStorage.getItem("deadline")) {
+  dateEntered = new Date(localStorage.getItem("deadline") as string)
+}
+console.log("User Last Date: " + localStorage.getItem("deadline"))
 
 // Update the Countdown with user input
 document.getElementById("deadline")!.addEventListener("change", function () {
@@ -62,6 +67,8 @@ document.getElementById("deadline")!.addEventListener("change", function () {
   let newTime = new Date(`${newDate}T${newHour}:${newMin}`)
   // console.log(newTime)
   dateEntered = new Date(`${newDate}T${newHour}:${newMin}`)
+  localStorage.setItem("deadline", dateEntered.toString())
+
   countdown()
 })
 
