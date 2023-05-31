@@ -23,3 +23,7 @@ body {
 .countdown-el span {
   font-size: 1.3rem;
 }
+
+#deadline {
+  margin-top: 2em;
+}
