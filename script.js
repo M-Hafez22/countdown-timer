@@ -25,15 +25,15 @@ const addLeadingZero = (number) => number < 10 ? `0${number}` : number.toString(
 // Generates Minutes Input List
 for (let i = 0; i < 60; i++) {
     let opt = document.createElement("option");
-    opt.value = i < 10 ? `0${i}` : i.toString();
-    opt.textContent = i < 10 ? `0${i}` : i.toString();
+    opt.value = addLeadingZero(i);
+    opt.textContent = addLeadingZero(i);
     getMinuteEl === null || getMinuteEl === void 0 ? void 0 : getMinuteEl.appendChild(opt);
 }
 // Generates Hours Input List
 for (let i = 0; i < 24; i++) {
     let opt = document.createElement("option");
-    opt.value = i < 10 ? `0${i}` : i.toString();
-    opt.textContent = i < 10 ? `0${i}` : i.toString();
+    opt.value = addLeadingZero(i);
+    opt.textContent = addLeadingZero(i);
     getHourEl === null || getHourEl === void 0 ? void 0 : getHourEl.appendChild(opt);
 }
 // Set inputs with the current date & time
