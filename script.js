@@ -112,6 +112,11 @@ function countdown() {
     seconds <= 0
         ? (secondsEl.parentElement.style.display = "none")
         : (secondsEl.parentElement.style.display = "block");
+    // Time is Out message
+    if (dateEntered.getTime() - currentDate.getTime() <= 0) {
+        messEl.style.display = "block";
+        messEl.textContent = "Time is Out";
+    }
 }
 // initial call
 countdown();
