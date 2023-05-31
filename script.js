@@ -47,3 +47,17 @@ let today = year + "-" + month + "-" + day;
 getDateEl.value = today;
 getMinuteEl.value = min.toString();
 getHourEl.value = hour.toString();
+let dateEntered;
+// Update the Countdown with user input
+document.getElementById("deadline").addEventListener("change", function () {
+    let newDate = getDateEl.value;
+    let newHour = getHourEl.value;
+    let newMin = getMinuteEl.value;
+    let newTime = new Date(`${newDate}T${newHour}:${newMin}`);
+    // console.log(newTime)
+    dateEntered = new Date(`${newDate}T${newHour}:${newMin}`);
+    countdown();
+});
+function countdown() {
+    console.log("Hi, I'm the countdown function");
+}
