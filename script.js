@@ -68,6 +68,15 @@ function countdown() {
     console.log("Hi, I'm the countdown function");
     const currentDate = new Date();
     // Calculate the countdown time clock
+    const totalSeconds = (dateEntered.getTime() - currentDate.getTime()) / 1000;
+    const decades = Math.floor(totalSeconds / 3600 / 24 / 365 / 10);
+    const years = Math.floor(totalSeconds / 3600 / 24 / 365) % 10;
+    const months = Math.floor(totalSeconds / 3600 / 24 / 7 / 4) % 12;
+    const weeks = Math.floor(totalSeconds / 3600 / 24 / 7) % 4;
+    const days = Math.floor(totalSeconds / 3600 / 24) % 7;
+    const hours = Math.floor(totalSeconds / 3600) % 24;
+    const mins = Math.floor(totalSeconds / 60) % 60;
+    const seconds = Math.floor(totalSeconds) % 60;
     // Print the countdown time clock
     // Dispaly only needed cells
 }
