@@ -76,6 +76,16 @@ function countdown() {
   console.log("Hi, I'm the countdown function")
   const currentDate: Date = new Date()
   // Calculate the countdown time clock
+  const totalSeconds: number =
+    (dateEntered.getTime() - currentDate.getTime()) / 1000
+  const decades: number = Math.floor(totalSeconds / 3600 / 24 / 365 / 10)
+  const years: number = Math.floor(totalSeconds / 3600 / 24 / 365) % 10
+  const months: number = Math.floor(totalSeconds / 3600 / 24 / 7 / 4) % 12
+  const weeks: number = Math.floor(totalSeconds / 3600 / 24 / 7) % 4
+  const days: number = Math.floor(totalSeconds / 3600 / 24) % 7
+  const hours: number = Math.floor(totalSeconds / 3600) % 24
+  const mins: number = Math.floor(totalSeconds / 60) % 60
+  const seconds: number = Math.floor(totalSeconds) % 60
   // Print the countdown time clock
   // Dispaly only needed cells
 }
