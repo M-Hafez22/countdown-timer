@@ -1,6 +1,6 @@
 body {
   /* margin: 2em; */
-  background-image: url("./clock.jpg");
+  background-image: url("./522153.jpg");
   background-size: cover;
   background-position: center center;
 
@@ -10,6 +10,7 @@ body {
   align-items: center;
   justify-content: space-between;
   min-height: 90vh;
+  color: #55ceb0;
 }
 .countdown-dashboard {
   display: flex;
