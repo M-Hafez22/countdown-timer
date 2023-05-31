@@ -70,6 +70,7 @@ document.getElementById("deadline")!.addEventListener("change", function () {
   localStorage.setItem("deadline", dateEntered.toString())
 
   countdown()
+  setInterval(countdown, 1000)
 })
 
 function countdown() {
@@ -97,3 +98,5 @@ function countdown() {
   secondsEl.textContent = addLeadingZero(seconds)
   // Dispaly only needed cells
 }
+
+setInterval(countdown, 1000)

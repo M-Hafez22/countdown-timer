@@ -63,6 +63,7 @@ document.getElementById("deadline").addEventListener("change", function () {
     dateEntered = new Date(`${newDate}T${newHour}:${newMin}`);
     localStorage.setItem("deadline", dateEntered.toString());
     countdown();
+    setInterval(countdown, 1000);
 });
 function countdown() {
     console.log("Hi, I'm the countdown function");
@@ -88,3 +89,4 @@ function countdown() {
     secondsEl.textContent = addLeadingZero(seconds);
     // Dispaly only needed cells
 }
+setInterval(countdown, 1000);
