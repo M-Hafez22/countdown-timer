@@ -14,3 +14,11 @@ const messEl = document.getElementById("mess")!
 const getDateEl = document.getElementById("date")!
 const getMinuteEl = document.getElementById("minute")
 const getHourEl = document.getElementById("hour")
+
+// Generates Minutes Input List
+for (let i = 0; i < 60; i++) {
+  let opt = document.createElement("option")
+  opt.value = i < 10 ? `0${i}` : i.toString()
+  opt.textContent = i < 10 ? `0${i}` : i.toString()
+  getMinuteEl?.appendChild(opt)
+}
