@@ -27,6 +27,7 @@ for (let i = 0; i < 60; i++) {
     let opt = document.createElement("option");
     opt.value = addLeadingZero(i);
     opt.textContent = addLeadingZero(i);
+    opt.classList.add("option");
     getMinuteEl === null || getMinuteEl === void 0 ? void 0 : getMinuteEl.appendChild(opt);
 }
 // Generates Hours Input List
@@ -34,6 +35,7 @@ for (let i = 0; i < 24; i++) {
     let opt = document.createElement("option");
     opt.value = addLeadingZero(i);
     opt.textContent = addLeadingZero(i);
+    opt.classList.add("option");
     getHourEl === null || getHourEl === void 0 ? void 0 : getHourEl.appendChild(opt);
 }
 // Set inputs with the current date & time
