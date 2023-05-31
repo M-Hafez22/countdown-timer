@@ -89,4 +89,6 @@ function countdown() {
     secondsEl.textContent = addLeadingZero(seconds);
     // Dispaly only needed cells
 }
+// initial call
+countdown();
 setInterval(countdown, 1000);
