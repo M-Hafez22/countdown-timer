@@ -99,4 +99,6 @@ function countdown() {
   // Dispaly only needed cells
 }
 
+// initial call
+countdown()
 setInterval(countdown, 1000)
