@@ -35,13 +35,14 @@ inputTitleNameEl.style.display = "none" // Hide input field
 let titleEditing = false // Watch editing status
 setTitleEl.addEventListener("click", function () {
   if (titleEditing) {
-    console.log("Title Editing is On")
+    // Disable Editing
     inputTitleNameEl.style.display = "none"
     titleNameEl.style.visibility = "visible"
     titleEditing = false
   } else {
-    console.log("Title Editing is off")
+    // Enable Editing
     inputTitleNameEl.style.display = "block"
+    inputTitleNameEl.focus()
     titleNameEl.style.visibility = "hidden"
     titleEditing = true
   }
