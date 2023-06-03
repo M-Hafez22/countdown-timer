@@ -51,6 +51,9 @@ label {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  background-color: rgba(000, 000, 000, 0.2);
+  border-radius: 15px;
+  padding: 0.5em 0.5em 1.2em;
 }
 
 .big-text {
