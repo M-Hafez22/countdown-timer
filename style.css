@@ -1,11 +1,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap");
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-clr: #470e79;
+    --bg-first: #042d52;
+    --bg-second: #410f6d;
+    --bg-third: #bd637d;
+    --text-clr: #f7f7f7;
+  }
+}
 
-:root {
-  --bg-clr: #4e1580;
-  --bg-first: #063763;
-  --bg-second: #4e1580;
-  --bg-third: #e8a1b5;
-  --text-clr: #f7f7f7;
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg-clr: #ae5af7;
+    --bg-first: #8dc7f7;
+    --bg-second: #c08aee;
+    --bg-third: #f0a3ba;
+    --text-clr: #2c2c2c;
+  }
 }
 
 * {
