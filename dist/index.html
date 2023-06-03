@@ -12,50 +12,53 @@
 </head>
 
 <body>
-    <h1>CountDown</h1>
-    <div class="countdown-dashboard">
-        <div class="countdown-el">
-            <p class="big-text" id="decades">0</p>
-            <span>decades</span>
+    <div id="CountDown">
+
+        <h1>CountDown</h1>
+        <div class="countdown-dashboard">
+            <div class="countdown-el">
+                <p class="big-text" id="decades">0</p>
+                <span>decades</span>
+            </div>
+            <div class="countdown-el">
+                <p class="big-text" id="years">0</p>
+                <span>years</span>
+            </div>
+            <div class="countdown-el">
+                <p class="big-text" id="months">0</p>
+                <span>months</span>
+            </div>
+            <div class="countdown-el">
+                <p class="big-text" id="weeks">0</p>
+                <span>weeks</span>
+            </div>
+            <div class="countdown-el">
+                <p class="big-text" id="days">0</p>
+                <span>days</span>
+            </div>
+            <div class="countdown-el">
+                <p class="big-text" id="hours">0</p>
+                <span>hours</span>
+            </div>
+            <div class="countdown-el">
+                <p class="big-text" id="mins">0</p>
+                <span>mins</span>
+            </div>
+            <div class="countdown-el">
+                <p class="big-text" id="seconds">0</p>
+                <span>seconds</span>
+            </div>
+            <div id="message"></div>
         </div>
-        <div class="countdown-el">
-            <p class="big-text" id="years">0</p>
-            <span>years</span>
-        </div>
-        <div class="countdown-el">
-            <p class="big-text" id="months">0</p>
-            <span>months</span>
-        </div>
-        <div class="countdown-el">
-            <p class="big-text" id="weeks">0</p>
-            <span>weeks</span>
-        </div>
-        <div class="countdown-el">
-            <p class="big-text" id="days">0</p>
-            <span>days</span>
-        </div>
-        <div class="countdown-el">
-            <p class="big-text" id="hours">0</p>
-            <span>hours</span>
-        </div>
-        <div class="countdown-el">
-            <p class="big-text" id="mins">0</p>
-            <span>mins</span>
-        </div>
-        <div class="countdown-el">
-            <p class="big-text" id="seconds">0</p>
-            <span>seconds</span>
-        </div>
-        <div id="message"></div>
+        <form action="submit" id="deadline">
+            <label for="hour">Day</label>
+            <input class="options" type="date" value="" id="date" />
+            <label for="hour">Hour</label>
+            <select class="options" id="hour" name="hour"></select>
+            <label for="min">Minites</label>
+            <select class="options" id="minute" name="minute"></select>
+        </form>
     </div>
-    <form action="submit" id="deadline">
-        <label for="hour">Day</label>
-        <input class="options" type="date" value="" id="date" />
-        <label for="hour">Hour</label>
-        <select class="options" id="hour" name="hour"></select>
-        <label for="min">Minites</label>
-        <select class="options" id="minute" name="minute"></select>
-    </form>
 </body>
 
 </html>
