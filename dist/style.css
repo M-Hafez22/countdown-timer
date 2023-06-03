@@ -2,9 +2,9 @@
 
 :root {
   --bg-clr: #4e1580;
-  --bg-first: #e8a1b5;
+  --bg-first: #063763;
   --bg-second: #4e1580;
-  --bg-third: #063763;
+  --bg-third: #e8a1b5;
   --text-clr: #f7f7f7;
 }
 
@@ -26,13 +26,13 @@
     75deg,
     var(--bg-first),
     var(--bg-second) 40%,
-    var(--bg-third) 70%
+    var(--bg-third) 95%
   ); /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(
     75deg,
     var(--bg-first),
     var(--bg-second) 40%,
-    var(--bg-third) 70%
+    var(--bg-third) 95%
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
   padding: 2em;
@@ -84,6 +84,9 @@ label {
   border-radius: 15px;
   background-color: var(--bg-clr);
   color: inherit;
+  font-weight: bold;
+  font-size: 1.25rem;
+  border: var(--bg-clr);
 }
 
 .option {
