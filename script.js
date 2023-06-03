@@ -28,18 +28,19 @@ const getHourEl = document.getElementById("hour");
  */
 const addLeadingZero = (number) => number < 10 ? `0${number}` : number.toString();
 // Update Timer Title
-inputTitleNameEl.style.display = "none";
-let titleEditing = false;
+inputTitleNameEl.style.display = "none"; // Hide input field
+let titleEditing = false; // Watch editing status
 setTitleEl.addEventListener("click", function () {
     if (titleEditing) {
-        console.log("Title Editing is On");
+        // Disable Editing
         inputTitleNameEl.style.display = "none";
         titleNameEl.style.visibility = "visible";
         titleEditing = false;
     }
     else {
-        console.log("Title Editing is off");
+        // Enable Editing
         inputTitleNameEl.style.display = "block";
+        inputTitleNameEl.focus();
         titleNameEl.style.visibility = "hidden";
         titleEditing = true;
     }
