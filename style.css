@@ -9,7 +9,7 @@
 
 body {
   /* margin: 2em; */
-  background-image: url("./522153.jpg");
+  background-image: url("./milad-fakurian-nY14Fs8pxT8-unsplash.jpg");
   background-size: cover;
   background-position: center center;
 
@@ -19,7 +19,7 @@ body {
   align-items: center;
   justify-content: space-between;
   min-height: 90vh;
-  color: #55ceb0;
+  color: #fff;
 }
 
 label {
