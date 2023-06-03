@@ -1,5 +1,10 @@
 "use strict";
 // Select HTML Elements
+// Title
+const titleEl = document.getElementById("title");
+const titleNameEl = document.getElementById("title-name");
+const inputTitleNameEl = document.getElementById("input-title-name");
+const setTitleEl = document.getElementById("set-title");
 // Countdown dashboard
 const decadesEl = document.getElementById("decades");
 const yearsEl = document.getElementById("years");
@@ -22,6 +27,26 @@ const getHourEl = document.getElementById("hour");
  * @returns {string} the number with leading zero
  */
 const addLeadingZero = (number) => number < 10 ? `0${number}` : number.toString();
+// Update Timer Title
+inputTitleNameEl.style.display = "none";
+let titleEditing = false;
+setTitleEl.addEventListener("click", function () {
+    if (titleEditing) {
+        console.log("Title Editing is On");
+        inputTitleNameEl.style.display = "none";
+        titleNameEl.style.visibility = "visible";
+        titleEditing = false;
+    }
+    else {
+        console.log("Title Editing is off");
+        inputTitleNameEl.style.display = "block";
+        titleNameEl.style.visibility = "hidden";
+        titleEditing = true;
+    }
+});
+inputTitleNameEl.addEventListener("change", function () {
+    titleNameEl.textContent = inputTitleNameEl.value;
+});
 // Generates Minutes Input List
 for (let i = 0; i < 60; i++) {
     let opt = document.createElement("option");
