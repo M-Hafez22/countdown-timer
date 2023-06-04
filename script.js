@@ -29,6 +29,10 @@ const getHourEl = document.getElementById("hour");
  */
 const addLeadingZero = (number) => number < 10 ? `0${number}` : number.toString();
 // Update Timer Title
+// Get Timer name from the browser storage
+if (localStorage.getItem("timerName")) {
+    titleNameEl.textContent = localStorage.getItem("timerName");
+}
 inputTitleNameEl.style.display = "none"; // Hide input field
 let titleEditing = false; // Watch editing status
 setTitleEl.addEventListener("click", function () {
@@ -46,8 +50,10 @@ setTitleEl.addEventListener("click", function () {
         titleEditing = true;
     }
 });
+// Update Timer Name
 inputTitleNameEl.addEventListener("change", function () {
     titleNameEl.textContent = inputTitleNameEl.value;
+    localStorage.setItem("timerName", inputTitleNameEl.value);
 });
 // Generates Minutes Input List
 for (let i = 0; i < 60; i++) {
