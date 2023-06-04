@@ -108,14 +108,19 @@ document.getElementById("deadline").addEventListener("change", function () {
 function countdown() {
     // console.log("Hi, I'm the countdown function")
     const currentDate = new Date();
-    // Hides dashboard if no date entered
+    // Hides dashboard if no date entered and show message
     if (dateEntered == undefined) {
-        // dashboardEl.style.display = "none"
         displayMessage();
         messEl.textContent = "No Time Left";
         return;
     }
-    //  Hides the message after date entered
+    // Hides dashboard if time is Out and show message
+    if (dateEntered.getTime() - currentDate.getTime() <= 0) {
+        displayMessage();
+        messEl.textContent = "Time is Out";
+        return;
+    }
+    // Hides the message and display Dashboard
     messEl.style.display = "none";
     dashboardEl.style.display = "flex";
     const totalSeconds = (dateEntered.getTime() - currentDate.getTime()) / 1000;
@@ -161,13 +166,6 @@ function countdown() {
     seconds <= 0
         ? (secondsEl.parentElement.style.display = "none")
         : (secondsEl.parentElement.style.display = "block");
-    // Time is Out message
-    if (dateEntered.getTime() - currentDate.getTime() <= 0) {
-        // dashboardEl.style.display = "none"
-        // messEl.style.display = "block"
-        displayMessage();
-        messEl.textContent = "Time is Out";
-    }
 }
 /**
  * Hide the Counter dashboard and display the message
