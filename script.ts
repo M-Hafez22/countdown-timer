@@ -5,7 +5,8 @@ const titleNameEl = document.getElementById("title-name")!
 const inputTitleNameEl = document.getElementById("input-title-name")!
 const setTitleEl = document.getElementById("set-title")!
 
-// Countdown dashboard
+// Countdown dashboard countdown-dashboard
+const dashboardEl = document.getElementById("countdown-dashboard")!
 const decadesEl = document.getElementById("decades")!
 const yearsEl = document.getElementById("years")!
 const monthsEl = document.getElementById("months")!
@@ -102,32 +103,17 @@ document.getElementById("deadline")!.addEventListener("change", function () {
 })
 
 function countdown() {
-  console.log("Hi, I'm the countdown function")
+  // console.log("Hi, I'm the countdown function")
   const currentDate: Date = new Date()
+
   // Hides dashboard if no date entered
   if (dateEntered == undefined) {
-    decadesEl.parentElement!.style.display = "none"
-    yearsEl.parentElement!.style.display = "none"
-    monthsEl.parentElement!.style.display = "none"
-    weeksEl.parentElement!.style.display = "none"
-    daysEl.parentElement!.style.display = "none"
-    hoursEl.parentElement!.style.display = "none"
-    minsEl.parentElement!.style.display = "none"
-    secondsEl.parentElement!.style.display = "none"
+    dashboardEl.style.display = "none"
     messEl.textContent = "No Time Left"
     return
   }
   //  Hides the message after date entered
   messEl.style.display = "none"
-  //   decadesEl.parentElement!.style.display = "block"
-  //   yearsEl.parentElement!.style.display = "block"
-  //   monthsEl.parentElement!.style.display = "block"
-  //   weeksEl.parentElement!.style.display = "block"
-  //   daysEl.parentElement!.style.display = "block"
-  //   hoursEl.parentElement!.style.display = "block"
-  //   minsEl.parentElement!.style.display = "block"
-  //   secondsEl.parentElement!.style.display = "block"
-  // Calculate the countdown time clock
   const totalSeconds: number =
     (dateEntered.getTime() - currentDate.getTime()) / 1000
   const decades: number = Math.floor(totalSeconds / 3600 / 24 / 365 / 10)
