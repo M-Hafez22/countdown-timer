@@ -39,6 +39,10 @@ if (localStorage.getItem("timerName")) {
 }
 inputTitleNameEl.style.display = "none" // Hide input field
 let titleEditing = false // Watch editing status
+// Focus input field when editing
+inputTitleNameEl.addEventListener("transitionend", function () {
+  inputTitleNameEl.focus()
+})
 setTitleEl.addEventListener("click", function () {
   if (titleEditing) {
     // Disable Editing
