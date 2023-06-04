@@ -32,6 +32,11 @@ const addLeadingZero = (number: number): string =>
   number < 10 ? `0${number}` : number.toString()
 
 // Update Timer Title
+
+// Get Timer name from the browser storage
+if (localStorage.getItem("timerName")) {
+  titleNameEl.textContent = localStorage.getItem("timerName") as string
+}
 inputTitleNameEl.style.display = "none" // Hide input field
 let titleEditing = false // Watch editing status
 setTitleEl.addEventListener("click", function () {
@@ -48,9 +53,15 @@ setTitleEl.addEventListener("click", function () {
     titleEditing = true
   }
 })
+// Update Timer Name
 inputTitleNameEl.addEventListener("change", function () {
   titleNameEl.textContent = (inputTitleNameEl as HTMLInputElement).value
+  localStorage.setItem(
+    "timerName",
+    (inputTitleNameEl as HTMLInputElement).value
+  )
 })
+
 // Generates Minutes Input List
 for (let i = 0; i < 60; i++) {
   let opt = document.createElement("option")
