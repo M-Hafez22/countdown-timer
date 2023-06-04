@@ -33,20 +33,25 @@ const addLeadingZero = (number) => number < 10 ? `0${number}` : number.toString(
 if (localStorage.getItem("timerName")) {
     titleNameEl.textContent = localStorage.getItem("timerName");
 }
-inputTitleNameEl.style.display = "none"; // Hide input field
+inputTitleNameEl.parentElement.classList.add("hide"); // Hide input field
 let titleEditing = false; // Watch editing status
+// Focus input field when editing
+inputTitleNameEl.addEventListener("transitionend", function () {
+    inputTitleNameEl.focus();
+});
 setTitleEl.addEventListener("click", function () {
     if (titleEditing) {
         // Disable Editing
         inputTitleNameEl.style.display = "none";
         titleNameEl.style.visibility = "visible";
+        setTitleEl.style.visibility = "visible";
         titleEditing = false;
     }
     else {
         // Enable Editing
-        inputTitleNameEl.style.display = "block";
-        inputTitleNameEl.focus();
+        inputTitleNameEl.parentElement.classList.add("show"); // Show input field
         titleNameEl.style.visibility = "hidden";
+        setTitleEl.style.visibility = "hidden";
         titleEditing = true;
     }
 });
