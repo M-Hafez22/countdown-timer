@@ -60,7 +60,7 @@
   margin-top: 2em;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
 }
 #set-title {
   border: none;
