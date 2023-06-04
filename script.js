@@ -110,7 +110,8 @@ function countdown() {
     const currentDate = new Date();
     // Hides dashboard if no date entered
     if (dateEntered == undefined) {
-        dashboardEl.style.display = "none";
+        // dashboardEl.style.display = "none"
+        displayMessage();
         messEl.textContent = "No Time Left";
         return;
     }
@@ -161,9 +162,19 @@ function countdown() {
         : (secondsEl.parentElement.style.display = "block");
     // Time is Out message
     if (dateEntered.getTime() - currentDate.getTime() <= 0) {
-        messEl.style.display = "block";
+        // dashboardEl.style.display = "none"
+        // messEl.style.display = "block"
+        displayMessage();
         messEl.textContent = "Time is Out";
     }
+}
+/**
+ * Hide the Counter dashboard and display the message
+ *
+ */
+function displayMessage() {
+    dashboardEl.style.display = "none";
+    messEl.style.display = "block";
 }
 // initial call
 countdown();
