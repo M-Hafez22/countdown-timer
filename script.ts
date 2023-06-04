@@ -132,6 +132,7 @@ function countdown() {
   }
   //  Hides the message after date entered
   messEl.style.display = "none"
+  dashboardEl.style.display = "flex"
   const totalSeconds: number =
     (dateEntered.getTime() - currentDate.getTime()) / 1000
   const decades: number = Math.floor(totalSeconds / 3600 / 24 / 365 / 10)
