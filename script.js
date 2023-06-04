@@ -117,6 +117,7 @@ function countdown() {
     }
     //  Hides the message after date entered
     messEl.style.display = "none";
+    dashboardEl.style.display = "flex";
     const totalSeconds = (dateEntered.getTime() - currentDate.getTime()) / 1000;
     const decades = Math.floor(totalSeconds / 3600 / 24 / 365 / 10);
     const years = Math.floor(totalSeconds / 3600 / 24 / 365) % 10;
