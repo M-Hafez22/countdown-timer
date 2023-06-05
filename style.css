@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap");
+
 @media (prefers-color-scheme: dark) {
   :root {
     --bg-clr: #470e79;
@@ -29,10 +30,6 @@
 
 #CountDown {
   /* background */
-  background-image: url("./milad-fakurian-nY14Fs8pxT8-unsplash.jpg");
-  background-size: cover;
-  background-position: center center;
-
   background: #14446e; /* fallback for old browsers */
   background: -webkit-linear-gradient(
     75deg,
