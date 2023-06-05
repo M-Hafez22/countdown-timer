@@ -103,7 +103,7 @@ let dateEntered: Date
 if (localStorage.getItem("deadline")) {
   dateEntered = new Date(localStorage.getItem("deadline") as string)
 }
-console.log("User Last Date: " + localStorage.getItem("deadline"))
+console.log("User Last Entered Date: " + localStorage.getItem("deadline"))
 
 // Update the Countdown with user input
 document.getElementById("deadline")!.addEventListener("change", function () {
@@ -111,7 +111,6 @@ document.getElementById("deadline")!.addEventListener("change", function () {
   let newHour = (getHourEl as HTMLInputElement).value
   let newMin = (getMinuteEl as HTMLInputElement).value
   let newTime = new Date(`${newDate}T${newHour}:${newMin}`)
-  // console.log(newTime)
   dateEntered = new Date(`${newDate}T${newHour}:${newMin}`)
   localStorage.setItem("deadline", dateEntered.toString())
 
@@ -120,7 +119,6 @@ document.getElementById("deadline")!.addEventListener("change", function () {
 })
 
 function countdown() {
-  // console.log("Hi, I'm the countdown function")
   const currentDate: Date = new Date()
 
   // Hides dashboard if no date entered and show message
